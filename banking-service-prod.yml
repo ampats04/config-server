@@ -1,12 +1,12 @@
 server:
-  port: 8082
+  port: 8080
 
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5432/bankingdb
+    url: jdbc:postgresql://prod-db:5432/banking
     username: postgres
     password: password
 
 logging:
   level:
-    root: INFO
+    root: WARN
