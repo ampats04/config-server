@@ -1,6 +1,12 @@
-server:
- port: 8081
-
 spring:
  application:
   name: banking-service
+
+server:
+ servlet: 
+  context-api: /api
+
+logging:
+ level:
+  root: INFO
+  
