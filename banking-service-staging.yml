@@ -3,13 +3,21 @@ server:
 
 spring:
   datasource:
-    url: jbdc:postgresql://${STAGING_DB_HOST}:${STAGING_DB_PORT}/${STAGING_DB_NAME}?sslmode=require
+    url: jdbc:postgresql://${STAGING_DB_HOST}:${STAGING_DB_PORT}/${STAGING_DB_NAME}?sslmode=require
     username: ${STAGING_DB_USERNAME}
     password: ${STAGING_DB_PASSWORD}
     hikari:
       maximum-pool-size: 10
       minimum-idle: 2
       connection-timeout: 30000
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        temp.use_jdbc_metadata_defaults: false
 
 logging:
   level:
