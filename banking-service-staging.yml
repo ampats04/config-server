@@ -3,9 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jbdc:postgresql://${STAGING_DB_HOST}:${STAGING_DB_PORT}/${STAGING_DB_NAME}?sslmode=require&ssl=true
+    url: jbdc:postgresql://${STAGING_DB_HOST}:${STAGING_DB_PORT}/${STAGING_DB_NAME}?sslmode=require
     username: ${STAGING_DB_USERNAME}
     password: ${STAGING_DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
 
 logging:
   level:

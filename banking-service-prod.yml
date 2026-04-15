@@ -3,9 +3,13 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${PROD_DB_HOST}:${PROD_DB_PORT}/${PROD_DB_NAME}?sslmode=require&ssl=true
+    url: jdbc:postgresql://${PROD_DB_HOST}:${PROD_DB_PORT}/${PROD_DB_NAME}?sslmode=require
     username: ${PROD_DB_USERNAME}
     password: ${PROD_DB_PASSWORD}
+    hikari:
+      maximum-pool-size: 10
+      minimum-idle: 2
+      connection-timeout: 30000
 
 logging:
   level:
