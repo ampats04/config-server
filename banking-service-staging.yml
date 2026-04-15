@@ -1,12 +1,12 @@
-spring:
- application:
-  name: banking-service
-
 server:
- servlet: 
-  context-api: /api
+  port: 8081
+
+spring:
+  datasource:
+    url: jbdc:postgresql://${secrets.STAGING_DB_HOST}:${secrets.STAGING_DB_PORT}/${secrets.STAGING_DB_NAME}
+    username: ${secrets.STAGING_DB_USERNAME}
+    password: ${secrets.STAGING_DB_PASSWORD}
 
 logging:
- level:
-  root: INFO
-  
+  level:
+    root: DEBUG

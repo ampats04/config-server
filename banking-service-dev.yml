@@ -1,12 +1,8 @@
 server:
-  port: 8081
+  port: 8082
 
 spring:
   datasource:
-    url: jbdc:postgresql://staging-db:5432/banking
+    url: jdbc:postgresql://localhost:5432/bankingdb
     username: postgres
     password: password
-
-logging:
-  level:
-    root: DEBUG

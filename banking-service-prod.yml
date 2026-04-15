@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://prod-db:5432/banking
-    username: postgres
-    password: password
+    url: jdbc:postgresql://${secrets.PROD_DB_HOST}:${secrets.PROD_DB_PORT}/${secrets.PROD_DB_NAME}
+    username: ${secrets.PROD_DB_USERNAME}
+    password: ${secrets.PROD_DB_PASSWORD}
 
 logging:
   level:
