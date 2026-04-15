@@ -9,13 +9,13 @@ eureka:
   server:
     enable-self-preservation: false
 
-managements:
+management:
   endpoints:
     web:
       exposure:
         include: "*"
 
-  endpoints:
+  endpoint:
     health:
       show-details: always
 
