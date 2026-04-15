@@ -3,9 +3,9 @@ server:
 
 spring:
   datasource:
-    url: jbdc:postgresql://${secrets.STAGING_DB_HOST}:${secrets.STAGING_DB_PORT}/${secrets.STAGING_DB_NAME}?sslmode=require&ssl=true
-    username: ${secrets.STAGING_DB_USERNAME}
-    password: ${secrets.STAGING_DB_PASSWORD}
+    url: jbdc:postgresql://${STAGING_DB_HOST}:${STAGING_DB_PORT}/${STAGING_DB_NAME}?sslmode=require&ssl=true
+    username: ${STAGING_DB_USERNAME}
+    password: ${STAGING_DB_PASSWORD}
 
 logging:
   level:
