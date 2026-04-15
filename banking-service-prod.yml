@@ -3,7 +3,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:postgresql://${secrets.PROD_DB_HOST}:${secrets.PROD_DB_PORT}/${secrets.PROD_DB_NAME}
+    url: jdbc:postgresql://${secrets.PROD_DB_HOST}:${secrets.PROD_DB_PORT}/${secrets.PROD_DB_NAME}?sslmode=require&ssl=true
     username: ${secrets.PROD_DB_USERNAME}
     password: ${secrets.PROD_DB_PASSWORD}
 
